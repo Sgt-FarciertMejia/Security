@@ -5,8 +5,10 @@ Stack Number	Username	  Password	        jump
 http://10.50.20.103:8000/
 Linux Ops 10.50.27.254               Windows Ops 10.50.31.208
 
+#  NMAP
 NMAP scripting engine location /usr/share/nmap/scripts
-USAGE & EXAMPLES 
+
+#  USAGE & EXAMPLES 
   nmap --script <filename>|<category>|<directory>
   nmap --script-help "ftp-* and discovery"
   nmap --script-args <args>
