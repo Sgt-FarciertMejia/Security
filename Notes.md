@@ -32,19 +32,16 @@ ssh -S /tmp/jump jump -O forward -D9050
 #  Port Interro
 proxychains nc <ip> <port>
 
+#  Multiple port forward with Socket
+ssh -S /tmp/jump jump -O forward -L1111:192.168.28.100:80 -L2222:192.168.28.100:2222 -L3333:192.168.28.111:80 -L5555:192.168.28.111:2222
 
+#  SSH with Master Socket Tunnel
+ssh -MS /tmp/t1 creds@127.0.0.1 -p 2222 
 
-
-
-
-
-
-
-
-
-
-
-
+#  Assuming net net and new ports found
+PingSweep
+port forward
+ssh -S /tmp/t1 t1 -O forward -D9050 (previous dynamic port must be canceled ssh -S /tmp/jump jump -O cancel -D99050)
 
 
 
