@@ -1,4 +1,4 @@
- #SETUP
+  #SETUP
 https://sec.cybbh.io/public/security/latest/index.html
 Stack Number	Username	  Password	        jump
 2 	          ALFA-007-M 	SiatKd1eRB2Q4ns 	10.50.33.233 (only running ping from jump box)
