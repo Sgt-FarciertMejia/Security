@@ -22,7 +22,7 @@ ssh -MS /tmp/jump student@10.50.33.233
 #  PingSweep
 for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
 
-#  Port forward 
+#  Set Up Dynamic Port forward 
 -S for socket file
 -O for forward options
 -D9050 proxychains
