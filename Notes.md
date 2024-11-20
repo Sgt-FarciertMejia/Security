@@ -29,9 +29,8 @@ for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
 requires a filler word to act as credentials (in this case its jump)
 ssh -S /tmp/jump jump -O forward -D9050
 
-
-
-
+#  Port Interro
+proxychains nc <ip> <port>
 
 
 
