@@ -76,7 +76,10 @@ ssh -MS /tmp/t2 creds@127.0.0.1 -p 2323
 ```
 On firefox type loopback followed by colon and fowarded port (127.0.0.1:port)
 ```
-
+#  Proxychains with http script
+```
+proxychains nmap --script=http-enum.nse 192.168.28.100
+```
 
 
 
