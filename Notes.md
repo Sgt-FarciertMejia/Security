@@ -16,14 +16,18 @@ NMAP scripting engine location /usr/share/nmap/scripts
 -nmap --script-help <filename>|<category>|<directory>
 -nmap --script-trace
 
+#  Master Socket ssh to jump
+ssh -MS /tmp/jump student@10.50.33.233
 
+#  PingSweep
+for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
 
-
-
-
-
-
-
+#  Port forward 
+-S for socket file
+-O for forward options
+-D9050 proxychains
+requires a filler word to act as credentials (in this case its jump)
+ssh -S /tmp/jump jump -O forward -D9050
 
 
 
