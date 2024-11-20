@@ -40,17 +40,18 @@ ssh -MS /tmp/t1 creds@127.0.0.1 -p 2222
 
 #  Assuming net net and new ports found
 PingSweep
-port forward
+# port forward
 ssh -S /tmp/t1 t1 -O forward -D9050 (previous dynamic port must be canceled ssh -S /tmp/jump jump -O cancel -D99050)
-
-
-
-
-
-
-
-
-
+# nmap port scan
+proxychains nmap <ip> (80 & 2222 found)
+# port interro
+proxychains nc <ip> <port>
+# Port Forward
+ssh -S /tmp/t1 t1 -O forward -L2323:ip:2222 -L4343:100.200.25.35:80
+# Authenticate to new ssh with ssh
+ssh -MS /tmp/t2 creds@127.0.0.1 -p 2323
+# To get to fowarded web ports
+On firefox type loopback followed by colon and fowarded port
 
 
 
