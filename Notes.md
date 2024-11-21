@@ -121,6 +121,7 @@ above ran on lin ops iot intercept traffic
 ```
 ssh-keygen  -t rsa -b 4096
 cat rsa key
+;mkdir /<homedir>/.ssh
 ; echo "<rsa key>" >> /<homedir>/.ssh/authorized_keys
 ssh into web server
 ```
