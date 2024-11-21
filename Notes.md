@@ -125,7 +125,20 @@ cat rsa key
 ; echo "<rsa key>" >> /<homedir>/.ssh/authorized_keys
 ssh into web server
 ```
+#  Server side dir traversal
+```
+Server-Side injection
 
+Directory Traversal/Path Traversal
+
+
+    Ability to read/execute outside web server’s directory
+
+    Uses ../../ (relative paths) in manipulating a server-side file path
+
+
+view_image.php?file=../../etc/passwd
+```
 
 
 
