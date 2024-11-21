@@ -116,7 +116,10 @@ above ran on lin ops iot intercept traffic
   </pre>
   </BODY></HTML>
 ```
-
+will create a file on lin ops with script above and upload to vuln webpage with malicious file upload
+1.place to upload ()
+2.ability to access location
+3.ability to call (directory must be reachable and allow access to newly uploaded script)
 #  upload copy of ssh rsa token
 ```
 ssh-keygen  -t rsa -b 4096
@@ -139,7 +142,9 @@ Directory Traversal/Path Traversal
 
 view_image.php?file=../../etc/passwd
 ```
-
+#  command injection
+test all input fields 
+1. ;<command> (prefferbly start with whoami command)
 
 
 
@@ -176,5 +181,6 @@ view_image.php?file=../../etc/passwd
 ```
 test command inject ;whoami
 when u see a .html try it
+read mission doc/pingsweep & nmap scan said net(nmap --script=http-enum on http ports)/interro ports/port forward/interact with website and test all input field for command injects with ;whoami(to upload rsa and id vuln)/
 
 ```
