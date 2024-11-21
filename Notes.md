@@ -172,4 +172,9 @@ view_image.php?file=../../etc/passwd
 
 
 
+# Misc NOTES
+```
+test command inject ;whoami
+when u see a .html try it
 
+```
