@@ -146,10 +146,47 @@ view_image.php?file=../../etc/passwd
 test all input fields 
 1. ;<command> (prefferbly start with whoami command)
 
+# SQL
+#  Starndard Commands
+```
+SELECT  Extracts data from a database
 
+UNION  Used to combine the result-set of two or more SELECT statements
 
+USE  Selects the DB to use
 
+UPDATE  Updates data in a database
 
+DELETE  Deletes data from a database
+
+INSERT INTO  Inserts new data into a database
+
+CREATE DATABASE  Creates a new database
+
+ALTER DATABASE  Modifies a database
+
+CREATE TABLE  Creates a new table
+
+ALTER TABLE  Modifies a table
+
+DROP TABLE  Deletes a table
+
+CREATE INDEX  Creates an index (search key)
+
+DROP INDEX  Deletes an index
+```
+mainly using union select or just select/union commands
+To select multiple just put a comma after first option followed by second option
+
+#  Testing SQL injection 
+attempt admin/password to see if vuln creds exist
+then ' or 1='1 on both input fields
+#   To get post/get request (Auth bypass)
+after verifying input field have no input validation (' or 1='1)
+f12 to launch dev console (before submitting ie pressing log in go to the network pane of devs console f12 and click network then submit)
+click on post line to reveal a smaller window in dev console
+click on request then click raw
+hightlight whats avail and paste it to url with a ? (question mark in front of it)
 
 
 
