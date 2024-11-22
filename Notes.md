@@ -188,7 +188,8 @@ click on post line to reveal a smaller window in dev console
 click on request then click raw
 hightlight whats avail and paste it to url with a ? (question mark in front of it)
 
-
+#  Golden Statement
+UNION SELECT table_schema,table_name,column_name FROM information_schema.columns
 
 
 
