@@ -212,7 +212,7 @@ table_schema=all databases names accross server
 table_name=all tables accross all databses accross server
 column_name=all columns accross all tables accross all databases accross server
 ```
-# SQL injection
+# SQL injection (only concerned with user created database)
 #   Post method
 interact with page then.  First identify vuln field with (' or 1='1) make sure to attempt with all options if necessary.  Second id the # of columns (dont just assume the visible columns are the end all) 
 Audi' UNION SELECT 1,2,3,4,5 # (you see columns numbered 1345(notice number 2 was skipped))
