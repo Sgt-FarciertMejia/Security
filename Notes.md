@@ -191,6 +191,35 @@ hightlight whats avail and paste it to url with a ? (question mark in front of i
 #  Golden Statement
 UNION SELECT table_schema,table_name,column_name FROM information_schema.columns
 
+```
+mysql (to get on sql server)
+show database ; (prints all databases on server)
+use information_schema ; (use that database)
+show tables from information_schema ; 
+show columns from columns ;
+selecet table_schema from information_schema.columns ; 
+select table_name from information_schema.columns ;
+select column_name from information_schema.columns ;
+select table_schema,table_name,column_name from information_schema.columns
+
+
+
+
+
+
+table_schema=all databases names accross server
+table_name=all tables accross all databses accross server
+column_name=all columns accross all tables accross all databases accross server
+
+
+
+
+
+
+
+
+
+
 
 
 
