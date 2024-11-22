@@ -210,7 +210,7 @@ select table_schema,table_name,column_name from information_schema.columns
 table_schema=all databases names accross server
 table_name=all tables accross all databses accross server
 column_name=all columns accross all tables accross all databases accross server
-
+```
 
 
 
