@@ -190,6 +190,7 @@ hightlight whats avail and paste it to url with a ? (question mark in front of i
 
 #  Golden Statement
 UNION SELECT table_schema,table_name,column_name FROM information_schema.columns
+                <column>,<column>,<column>              <database>.<table>
 
 ```
 mysql (to get on sql server)
