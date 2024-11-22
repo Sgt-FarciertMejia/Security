@@ -178,7 +178,7 @@ DROP INDEX  Deletes an index
 mainly using union select or just select/union commands
 To select multiple just put a comma after first option followed by second option
 
-#  Testing SQL injection 
+#  Testing SQL injection (for login pages)
 attempt admin/password to see if vuln creds exist
 then ' or 1='1 on both input fields
 #   To get post/get request (Auth bypass)
@@ -187,6 +187,10 @@ f12 to launch dev console (before submitting ie pressing log in go to the networ
 click on post line to reveal a smaller window in dev console
 click on request then click raw
 hightlight whats avail and paste it to url with a ? (question mark in front of it)
+
+
+
+
 
 #  Golden Statement
 UNION SELECT table_schema,table_name,column_name FROM information_schema.columns
