@@ -248,9 +248,13 @@ run gdb <program> (if failed review file perms)
 run disass main
 run disass on following functions (pdisass will how vulnerable commands)
 to run a file with program in gdb (run <<< $(<scriptingLanguage> <file name>))
-(environment variable gdb)env - gdb func
+(environment variable gdb) env - gdb func
 disable all env variables
-
+find buffer size be looking for first sub cmd in program?
+show info proc map
+start from top of heap to end of heap (0xff,-xe4 to find jump)
+create a nop sled
+create a payload with command whoami and generate a hexdump and copy onto script (generate -b "\x00" -f python)
 
 
 
