@@ -344,6 +344,14 @@ set lhost 0.0.0.0
 set lport 4444
 ```
 
+#  SCP Notes
+```
+scp <source> <destination>
+scp -P 1212 file.sh student@127.0.0.1:/home/student2/documents
+scp -P 1212 student@127.0.0.1:/home/student/documents/script.sh .
+scp -P 1212 file.sh student@127.0.0.1:C:/users/student/desktop
+scp -P 1212 student@127.0.0.1:C:/users/student/desktop/script.sh .
+```
 
 
 
