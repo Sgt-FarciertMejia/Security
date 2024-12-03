@@ -126,7 +126,7 @@ ssh-keygen  -t rsa -b 4096
 cat rsa key
 ;mkdir /<homedir>/.ssh
 ; echo "<rsa key>" >> /<homedir>/.ssh/authorized_keys
-ssh into web server
+ssh into web server (ssh <user>@127.0.0.1 -p x)
 ```
 #  Server side dir traversal
 ```
