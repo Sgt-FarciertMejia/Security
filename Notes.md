@@ -1,4 +1,8 @@
 Practiscore.com  usmc shooting team
+# FIND COMMNAND
+```
+find /etc -name *rkhunter* 2>/dev/null
+```
 #   SETUP
 ```
 https://sec.cybbh.io/public/security/latest/index.html
