@@ -357,6 +357,14 @@ scp -P 1212 file.sh student@127.0.0.1:C:/users/student/desktop
 scp -P 1212 student@127.0.0.1:C:/users/student/desktop/script.sh .
 ```
 
+#  Liux Priv Escalation
+```
+gtfobins.github.io
+find / -type f -perm /4000 -ls 2>/dev/null
+1) sudo -l
+2) go to gtfo bins to research available commands
+3) execute on termiinal to gain higher privs
+```
 
 
 # Misc NOTES
