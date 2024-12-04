@@ -370,6 +370,63 @@ find / -type f -perm /2 -o -type d -perm /2  2>/dev/null  (world writable files)
 3) execute on termiinal to gain higher privs
 ```
 
+#  Auditing systemv
+```
+ausearch: pulls from audit.log
+ausearch -p 22
+ausearch -m USER_LOGIN -sv no
+ausearch -ua edwards -ts yesterday -te now -i
+```
+
+#  Auditing systemd
+```
+journalctl _TRANSPORT=audit
+journalctl _TRANSPORT=audit | grep 603
+```
+
+
+#  Linux logs
+```
+Logs for Covering Tracks
+Logs typically housed in /var/log & useful logs:
+auth.log/secure  Logins/authentications
+lastlog  Each users' last successful login time
+btmp  Bad login attempts
+sulog  Usage of SU command
+utmp  Currently logged in users (W command)
+wtmp  Permanent record on user on/off
+```
+
+#  Find with logs
+```
+file /var/log/wtmp
+find /var/log -type f -mmin -10 2> /dev/null
+journalctl -f -u ssh
+journalctl -q SYSLOG_FACILITY=10 SYSLOG_FACILITY=4
+```
+
+#  Reading logs
+```
+cat /var/log/auth.log | egrep -v "opened|closed"
+awk '/opened/' /var/log/auth.log
+last OR lastb OR lastlog
+strings OR dd            # for data files
+more /var/log/syslog
+head/tail
+              control output w/ | & more
+```
+
+#  Cleaning logs
+    Before we start cleaning, save the INODE!
+        Affect on the inode of using mv VS cp VS cat
+    Know what we are removing (Entry times? IP? Whole file? Etc.)
+
+
+
+
+
+
+
 
 # Misc NOTES
 ```
