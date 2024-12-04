@@ -360,7 +360,11 @@ scp -P 1212 student@127.0.0.1:C:/users/student/desktop/script.sh .
 #  Liux Priv Escalation
 ```
 gtfobins.github.io
-find / -type f -perm /4000 -ls 2>/dev/null
+find / -type f -perm /6000 -ls 2>/dev/null  (SUID + SGID)
+find / -type f -perm /4000 -ls 2>/dev/null  (SUID)
+find / -type f -perm /2000 -ls 2>/dev/null  (SGID)
+find / -type f -writable -o -type d -writble 2>/dev/null  (files user can write to)
+find / -type f -perm /2 -o -type d -perm /2  2>/dev/null  (world writable files)
 1) sudo -l
 2) go to gtfo bins to research available commands
 3) execute on termiinal to gain higher privs
