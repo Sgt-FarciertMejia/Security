@@ -457,4 +457,5 @@ test command inject ;whoami
 when u see a .html try it
 read mission doc/pingsweep & nmap scan said net(nmap --script=http-enum on http ports)/interro ports/port forward/interact with website and test all input field for command injects with ;whoami(to upload rsa and id vuln)/
 crontab -e (view all cron jobs)
+(get-process | ?{$_.name -like "putty"}).kill()
 ```
