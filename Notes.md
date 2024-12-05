@@ -1,4 +1,8 @@
 Practiscore.com  usmc shooting team
+#  Sysinternals
+```
+net use z: "\\http://live.sysinternals.com" /persistent:yes
+```
 # FIND COMMNAND
 ```
 find /etc -name *rkhunter* 2>/dev/null
