@@ -1,4 +1,12 @@
 Practiscore.com  usmc shooting team
+#  xfreerdp
+```
+xfreerdp /v:10.50.x.x /u:student /p:password /size:1920x1000 +clipboard
+```
+if error occurs due to known host
+```
+rm -rf /home/student/.config/freerdp/known_hosts
+```
 #  Sysinternals
 ```
 net use z: "\\http://live.sysinternals.com" /persistent:yes
