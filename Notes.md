@@ -421,6 +421,25 @@ head/tail
         Affect on the inode of using mv VS cp VS cat
     Know what we are removing (Entry times? IP? Whole file? Etc.)
 
+#  Create Service
+```
+.\sc.exe create puttyService binpath='C:\Program Files (x86)\Putty\putty.exe' displayname='puttyService' start=auto
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
