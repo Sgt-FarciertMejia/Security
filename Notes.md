@@ -479,3 +479,5 @@ crontab -e (view all cron jobs)
 (get-process | ?{$_.name -like "putty"}).kill()
 auditpol /get /category:* | findstr /i "success failure"
 ```
+Hacker', '1', '1', 1)#
+explanation the close parenthesis was a formating and # was to comment the rest of the fields out
